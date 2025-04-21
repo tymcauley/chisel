@@ -35,7 +35,8 @@ jobs:
           # The "toTag" is the released tag, and the "fromTag" is the previous tag according to SemVer
           fromTag: ${{ github.event.inputs.fromTag }}
           toTag: ${{ github.event.inputs.toTag }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PERSONAL_CI_TOKEN }}
+          owner: chipsalliance
       - name: Report Release Notes
         # Put output through env variable to make it robust to quotes
         env:
